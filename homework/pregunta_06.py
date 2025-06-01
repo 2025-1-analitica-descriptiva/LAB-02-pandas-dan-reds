@@ -17,7 +17,7 @@ def pregunta_06():
     """
     import pandas as pd
 
-    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl1.tsv"
+    ruta = r"./files/input/tbl1.tsv"
     data = pd.read_csv(ruta, sep="\t")
     lista = sorted(data["c4"].astype(str).str.upper().unique())
     return lista

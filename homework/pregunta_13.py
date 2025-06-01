@@ -22,8 +22,8 @@ def pregunta_13():
     """
     import pandas as pd
 
-    ruta1 = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
-    ruta2 = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl2.tsv"
+    ruta1 = r"./files/input/tbl0.tsv"
+    ruta2 = r"./files/input/tbl2.tsv"
     data1 = pd.read_csv(ruta1, sep="\t")
     data2 = pd.read_csv(ruta2, sep="\t")
     data2_sum = data2.groupby("c0")["c5b"].sum()

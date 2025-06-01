@@ -24,7 +24,7 @@ def pregunta_08():
     """
     
     import pandas as pd
-    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    ruta = r"./files/input/tbl0.tsv"
     data = pd.read_csv(ruta, sep="\t")
     data["suma"] = data["c0"] + data["c2"]
     return data

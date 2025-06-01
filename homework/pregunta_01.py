@@ -16,7 +16,7 @@ def pregunta_01():
     """
     import pandas as pd
 
-    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    ruta = r"./files/input/tbl0.tsv"
     db = pd.read_csv(ruta, sep="\t")
     filas = db.shape[0]
     return filas

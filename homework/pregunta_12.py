@@ -24,7 +24,7 @@ def pregunta_12():
     """
     
     import pandas as pd
-    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl2.tsv"
+    ruta = r"./files/input/tbl2.tsv"
     data = pd.read_csv(ruta, sep="\t")
     data["c5"] = data[["c5a", "c5b"]].astype(str).apply(":".join, axis=1)
     tabla = data.groupby("c0")["c5"].apply(lambda x: ",".join(map(str, sorted(x)))).reset_index(name="c5")
