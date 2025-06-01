@@ -20,3 +20,9 @@ def pregunta_07():
     E    67
     Name: c2, dtype: int64
     """
+    import pandas as pd
+
+    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    data = pd.read_csv(ruta, sep="\t")
+    suma = data.groupby("c1")["c2"].sum()
+    return suma

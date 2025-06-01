@@ -14,3 +14,9 @@ def pregunta_02():
     4
 
     """
+    import pandas as pd
+
+    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    db = pd.read_csv(ruta, sep="\t")
+    columnas = db.shape[1]
+    return columnas

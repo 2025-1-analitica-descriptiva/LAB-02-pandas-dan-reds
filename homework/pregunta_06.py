@@ -15,3 +15,9 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
+    import pandas as pd
+
+    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl1.tsv"
+    data = pd.read_csv(ruta, sep="\t")
+    lista = sorted(data["c4"].astype(str).str.upper().unique())
+    return lista

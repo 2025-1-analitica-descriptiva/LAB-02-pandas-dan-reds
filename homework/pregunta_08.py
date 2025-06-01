@@ -22,3 +22,9 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
+    
+    import pandas as pd
+    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    data = pd.read_csv(ruta, sep="\t")
+    data["suma"] = data["c0"] + data["c2"]
+    return data

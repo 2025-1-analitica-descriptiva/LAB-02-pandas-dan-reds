@@ -20,3 +20,13 @@ def pregunta_13():
     E    275
     Name: c5b, dtype: int64
     """
+    import pandas as pd
+
+    ruta1 = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    ruta2 = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl2.tsv"
+    data1 = pd.read_csv(ruta1, sep="\t")
+    data2 = pd.read_csv(ruta2, sep="\t")
+    data2_sum = data2.groupby("c0")["c5b"].sum()
+    merge = pd.merge(data1, data2_sum, on="c0", how="inner")
+    conteo = merge.groupby("c1")["c5b"].sum()
+    return conteo

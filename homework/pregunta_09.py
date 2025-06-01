@@ -23,3 +23,10 @@ def pregunta_09():
     39  39  E   5  1998-01-26  1998
 
     """
+    
+    import pandas as pd
+
+    ruta = r"C:/Users/danie/Documents/GitHub/LAB-02-pandas-dan-reds/files/input/tbl0.tsv"
+    data = pd.read_csv(ruta, sep="\t")
+    data["year"] = data["c3"].str.split("-").str[0]
+    return data
